@@ -21,6 +21,16 @@ public class Main {
         }
     }
 
+    public static void specifiesTheDeliveryTime(int deliveryDistance) {// определяет количество дней на доставку
+        int deliveryPeriod = 1;
+        if (deliveryDistance < 20){
+            System.out.println("\nПотребуется дней на доставку: " + deliveryPeriod);
+        }else {
+            deliveryPeriod += 1 + (deliveryDistance - 20) / 40;
+            System.out.println("\nПотребуется дней на доставку: " + deliveryPeriod);
+        }
+    }
+
     public static void task1() {// задание №1
         int year = 2020;
         checkForLeapYear(year);
@@ -32,8 +42,14 @@ public class Main {
         checksForApplicationVersion(clientOS, yearOfIssue);
     }
 
+    public static void task3() {// заадние №3
+        int deliveryDistance = 120;
+        specifiesTheDeliveryTime(deliveryDistance);
+    }
+
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
 }
